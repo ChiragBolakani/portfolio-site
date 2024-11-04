@@ -1,0 +1,292 @@
+/* General Reset */
+* {
+    color: #222;
+    font-family: 'Inconsolata', monospace;
+    line-height: 1.6;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* Container and Layout */
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Navbar Styling */
+.navbar-brand {
+    font-size: 2rem;
+    color: #dc3545;
+}
+
+.nav-link {
+    color: #dc3545;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer Links */
+#footer a,
+.navbar-brand {
+    color: #222;
+    text-decoration: none;
+}
+
+#footer a:hover,
+.navbar-brand:hover {
+    color: #555;
+    text-decoration: underline;
+}
+
+/* Headings and Typography */
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+    font-weight: 700;
+    margin: 1.2rem 0 0.8rem;
+}
+
+#content h1 {
+    font-size: 1.8rem;
+}
+
+#content h2 {
+    font-size: 1.6rem;
+}
+
+#content h3 {
+    font-size: 1.4rem;
+}
+
+#content h4 {
+    font-size: 1.2rem;
+}
+
+/* Avatar Image */
+#content .avatar>img {
+    border-radius: 50%;
+    float: right;
+    margin: -8px 0 0 16px;
+    height: 150px;
+    width: 150px;
+    transition: transform 0.3s;
+}
+
+#content .avatar>img:hover {
+    transform: scale(1.05);
+}
+
+/* Lists */
+#content ul {
+    list-style: inside;
+    padding-left: 2rem;
+    margin: 0;
+}
+
+#content ol {
+    counter-reset: list;
+    list-style: none;
+    padding-left: 2rem;
+}
+
+#content ol>li {
+    display: table-row;
+    margin-bottom: 0.5rem;
+}
+
+#content ol>li:before {
+    content: "[" counter(list, decimal) "] ";
+    counter-increment: list;
+    display: table-cell;
+    text-align: right;
+    padding-right: 0.5em;
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Blockquote */
+#content blockquote {
+    border-left: 4px solid #dc3545;
+    font-style: italic;
+    margin: 1.5rem 0;
+    padding: 8px 16px;
+    background-color: #f8f8f8;
+}
+
+/* Code Blocks */
+#content code {
+    color: #222;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 0.95em;
+}
+
+#content pre code {
+    all: unset;
+}
+
+/* Table Styling */
+#content table {
+    margin: 1rem auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#content table th,
+#content table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#content table th {
+    font-weight: bold;
+}
+
+#content table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+/* Horizontal Line */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 1.5rem 0;
+}
+
+/* hr.dashed {
+    border-top: 1px dashed #ccc;
+    background: none;
+} */
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+    /* General text color */
+}
+
+/* Adjust Navbar, Links, and Footer for Dark Mode */
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link,
+body.dark-mode #footer a {
+    color: #ff8c00;
+    /* Accent color for links */
+}
+
+/* Headings and Highlights in Dark Mode */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #ff8c00;
+    /* Headings in accent color */
+}
+
+body.dark-mode p {
+    color: #e0e0e0;
+}
+
+body.dark-mode #content a {
+    color: #ff8c00;
+    /* Accent color for hyperlinks */
+}
+
+/* Code Blocks */
+body.dark-mode #content code {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+/* Blockquote Styling */
+body.dark-mode #content blockquote {
+    border-left-color: #ff8c00;
+    background-color: #2a2a2a;
+}
+
+/* Horizontal Line */
+body.dark-mode hr {
+    background-color: #555;
+}
+
+body.dark-mode hr.dashed {
+    border-top-color: #555;
+}
+
+/* Table Rows */
+body.dark-mode #content table tr:nth-child(2n) {
+    background-color: #333;
+}
+
+/* List Items */
+body.dark-mode ul body.dark-mode ol {
+    color: #e0e0e0;
+    /* General list item color */
+}
+
+/* Smooth Transitions for Mode Change */
+body.dark-mode * {
+    color: #e0e0e0;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+    z-index: 1000;
+    /* Ensure it appears on top */
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: #111;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+    transform: translateX(24px);
+}
