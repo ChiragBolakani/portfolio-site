@@ -39,7 +39,7 @@
                 Chirag Bolakani
             </a>
             <div class="navbar-nav flex-row flex-wrap justify-content-center">
-                <a class="nav-item nav-link" href="pdfs/ChiragBolakani_Resume_Jul2024.pdf" title="CV">Resume</a>
+                <a class="nav-item nav-link" href="pdfs/ChiragBolakani_Resume.pdf" title="CV">Resume</a>
             </div>
         </nav>
     </div>
@@ -83,7 +83,7 @@
                 <h3>Software Engineer</h3>
                 <p><strong>SpotinfoAI — Aug 2024 - Present</strong></p>
                 <ul>
-                    <li>Developed a robust Django backend with 100+ REST endpoints, integrating Google OAuth2 for secure authentication and asynchronous WebSocket handling via Python generators.</li>
+                    <li>Developed a robust Django backend with 100+ REST endpoints, integrating JWT and Google OAuth2 for secure authentication and asynchronous WebSocket handling via Python generators.</li>
                     <li>Optimized the time to first byte of LLM responses by over 60% (from 8s to 3s) through performance enhancements and Redis caching.</li>
                     <li>Streamlined file workflows by integrating Amazon S3 and the Google Drive API for secure document and image management.</li>
                     <li>Built a FastAPI service for managing LiveKit rooms, enabling real-time voice communication.</li>
@@ -115,6 +115,15 @@
 
             <div id="projects">
                 <h2>Technical Projects</h2>
+                <h4>DocGenie, Jan 2025 - Present</h4>
+                <a href="https://docgenie.chiragbolakani.com/"><i class='fas fa-external-link-square-alt' style="margin-right: 10px;"></i></a>
+                <ul>
+                    <li>RAG-based AI application for document processing.</li>
+                    <li>Built using Django, Celery for task execution, PostgreSQL as DB, ChromaDB as vector storage, and Redis for caching.</li>
+                    <li>Deployed on Google Cloud Run using Docker for scalability and efficiency.</li>
+                    <li>Implemented real-time query streaming via HTTP <b>Server-Sent Events (SSE)</b>.</li>
+                    <li>Optimized for an <b>average Time to First Byte (TTFB) &lt; 2s</b>, ensuring fast query responses.</li>
+                </ul>
                 <h4>Chill-Pill, May 2024 - Jun 2024</h4>
                 <a href="https://chillpill.chiragbolakani.com/"><i
                         class='fas fa-external-link-square-alt' style="margin-right: 10px;"></i></a>
